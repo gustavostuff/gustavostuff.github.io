@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+  color: #555;
+}
+
+.my-face {
+  width: 200px;
+  border-radius: 100px;
+}
+
+.thing-i-made img {
+  width: 230px;
+  cursor: pointer;
+  position: relative;
+}
+
+.thing-i-made img:hover {
+  transform: scale(1.1);
+}
+
+.thing-i-made.smaller img {
+  width: 170px;
+}
+
+.thing-i-made figcaption {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-me {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.gap {
+  padding: 1rem;
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+iframe {
+  border: none;
+}
+
+canvas{
+  margin: 0 auto;
+}

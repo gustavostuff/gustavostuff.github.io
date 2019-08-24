@@ -1,35 +1,86 @@
 <html>
   <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
     <title>Gustavo Lara</title>
   </head>
   <body>
-      <h1>Welcome to my shitty page</h1>
+    <div class="text-center">
+      <img class="my-face" src="https://i.postimg.cc/6qDLmn6v/profile.jpg" alt="my face shoul be here">
+      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I also like everything related to Science and Technology . Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
+      <p class="about-me">I live with my wife and my son in Sonora, Mexico (we have tough summers around here!)</p>
+    </div>
 
-      <p>
-        <img width="200" src="https://i.postimg.cc/6qDLmn6v/profile.jpg" alt="My face">
-      </p>
-      
-      <p>Hi, My name is Gustavo and I'm a Software Engineer. I'm mostly focused on JavaScript and Front-end. I like everything related to Computer Science (or just Science) and technology. <b>Have you seen Conway's Game of Life or Langton's Ant? I freaking love stuff like that!</b></p>
-      
-      <hr />
+    <div class="gap"></div>
 
-      <h1>Some things I made:</h1>
-      
-      <ul>
-        <li>
-          <a href="https://github.com/tavuntu/real-men">real-men</a>, MEN stack API generator
-        </li>
-        <li>
-          <a href="https://github.com/tavuntu/gooi">GOOi</a>, a Graphic User Interface LÖVE library
-        </li>
-        <li>
-          <a href="https://github.com/tavuntu/niji">niji</a>, CSS library for childish web styles
-        </li>
-        <li>
-          <a href="https://github.com/tavuntu/atari-love2d-demo">An Atari2600-like PC game</a>
-        </li>
-      </ul>
-      
-      <p>My homepage: <a href="https://github.com/tavuntu">https://github.com/tavuntu</a></p>
+    <div class="text-center">
+      <h2>Some things I made</h2>
+    </div>
+
+    <div class="row">
+      <div class="text-center">
+        <figure class="thing-i-made">
+          <img onclick="goTo('https://github.com/tavuntu/real-men')" src="https://i.postimg.cc/K8qSDHs2/real-men.png" alt="real-men logo">
+          <figcaption>MEN stack API generator</figcaption>
+        </figure>
+      </div>
+      <div class="text-center">
+        <figure class="thing-i-made">
+          <img onclick="goTo('https://github.com/tavuntu/gordan')" src="https://i.postimg.cc/R03MWK4w/gordan.png" alt="Gordan logo">
+          <figcaption>Gauss-Jordan + Regression JavaScript Library</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="thing-i-made smaller">
+          <img onclick="goTo('https://github.com/tavuntu/gooi')" src="https://i.postimg.cc/prGpHZLM/gooi.png" alt="GOOi logo">
+          <figcaption>LÖVE GUI Library</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="thing-i-made smaller">
+          <img onclick="goTo('https://github.com/tavuntu/niji')" src="https://i.postimg.cc/Qtnp8yc8/niji.png" alt="niji logo">
+          <figcaption>Non-serious styling for HTML elements</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="thing-i-made">
+          <img onclick="goTo('https://github.com/tavuntu/atari-love2d-demo')" src="https://i.postimg.cc/5NsKSGdf/atari-gif.gif" alt="my atari 2600-like game">
+          <figcaption>This retro game</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gap"></div>
+
+    <h2 class="text-center">Some things I like</h2>
+
+    <div class="row">
+      <div class="col">
+        <figure class="thing-i-made">
+          <canvas width="330" height="330" id="chart"></canvas>
+          <figcaption>Graphics</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="thing-i-made">
+          <iframe id="cube-iframe" width="330" height="330" src="" scrolling="no"></iframe>
+          <figcaption>Puzzles</figcaption>
+        </figure>
+      </div>
+      <div class="col">
+        <figure class="thing-i-made">
+          <iframe id="fight-iframe" width="330" height="330" src="" frameborder="0" allow="encrypted-media; picture-in-picture"></iframe>
+          <figcaption>Anime</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="text-center disclaimer">
+      <span>The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of the owner</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="js/gordan.js"></script>
+    <script src="js/site.js"></script>
   </body>
 </html>
