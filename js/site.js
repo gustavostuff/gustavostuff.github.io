@@ -55,7 +55,7 @@ const goTo = url => window.open(url);
   // other things
 
   let cubeIframe = document.getElementById('cube-iframe');
-  cubeIframe.setAttribute('src', "https://ruwix.com/widget/3d/?alg=F%20R'%20U2%20M%20x%20Rw%20U+D%20D%3E%3E&colored=F*&solved=B*&setupmoves=F%20R'%20U2%20M%20x%20Rw%20U+D%20D%3E%3E&tweaks=XxX:UFR&hover=4&speed=700&flags=showalg&colors=F:#00ffaf&pov=Fdl&algdisplay=rotations");
+  cubeIframe.setAttribute('src', "https://ruwix.com/widget/3d/?alg=F%20R'%20U2%20M%20x%20Rw%20U+D%20D%3E%3E&setupmoves=F%20R'%20U2%20M%20x%20Rw%20U+D%20D%3E%3E&hover=4&speed=700&flags=showalg&colors=F:#00ffaf&pov=Fdl&algdisplay=rotations");
 
   let fightFrame = document.getElementById('fight-iframe');
   fightFrame.setAttribute('src', 'https://www.youtube.com/embed/pgAsbQxWB6w');

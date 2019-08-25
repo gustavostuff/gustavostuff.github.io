@@ -2,15 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 3rem;
+  align-items: center;
 }
 
 .row figure {
   text-align: center;
-}
-
-.col {
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
 }
 
 /* YouTube embed responsive

@@ -1,6 +1,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <title>Gustavo Lara</title>
@@ -8,7 +10,7 @@
   <body>
     <div class="text-center">
       <img class="my-face" src="imgs/me.jpg" alt="my face shoul be here">
-      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I also like retro video games, Science (Sci-Fi too) and Technology. Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
+      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I like retro video games, Science (or Sci-Fi) and Technology. Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
       <p class="about-me">I live with my wife and my son in Sonora, Mexico. We have some rough summers here.</p>
     </div>
 
@@ -19,34 +21,40 @@
     </div>
 
     <div class="row">
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
           <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/real-men')" src="imgs/real-men.png" alt="real-men logo">
           <figcaption>MEN stack API generator</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
           <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/gordan')" src="imgs/gordan.png" alt="Gordan logo">
           <figcaption>Gauss-Jordan + Regression JavaScript Library</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made smaller">
           <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/gooi')" src="imgs/gooi.png" alt="GOOi logo">
           <figcaption>LÖVE GUI Library</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made smaller">
           <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/niji')" src="imgs/niji.png" alt="niji logo">
           <figcaption>Non-serious styling for HTML elements</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/atari-love2d-demo')" src="imgs/atari.gif" alt="my atari 2600-like game">
+          <img class="cursor-pointer" onclick="goTo('https://github.com/tavuntu/atari-love2d-demo')" src="imgs/atari.gif" alt="My atari 2600-like game">
           <figcaption>This retro game</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure class="thing-i-made">
+          <img class="cursor-pointer" onclick="goTo('https://tavuntu.github.io/')" src="imgs/page.png" alt="My page">
+          <figcaption>This page</figcaption>
         </figure>
       </div>
     </div>
@@ -56,19 +64,19 @@
     <h2 class="text-center">Some things I like</h2>
 
     <div class="row">
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
           <canvas height="295" id="chart"></canvas>
           <figcaption>Graphics</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
           <iframe id="cube-iframe" height="320" src="" scrolling="no"></iframe>
           <figcaption>Puzzles</figcaption>
         </figure>
       </div>
-      <div class="col">
+      <div>
         <figure class="thing-i-made">
           <div class="video-container">
             <iframe height="230"id="fight-iframe" src="" frameborder="0" allow="encrypted-media; picture-in-picture"></iframe>
@@ -76,13 +84,32 @@
           <figcaption>Anime</figcaption>
         </figure>
       </div>
+      <div>
+        <figure class="thing-i-made">
+          <img class="cursor-pointer" onclick="goTo('https://en.wikipedia.org/wiki/H._P._Lovecraft')" src="imgs/lovecraft.jpg" alt="H. P. Lovecraft">
+          <figcaption>This man's writings</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure class="thing-i-made">
+          <img class="cursor-pointer" onclick="goTo('https://en.wikipedia.org/wiki/Metal_Slug')" src="imgs/super-vehicle.gif" alt="Metal Slug Super Vehicle">
+          <figcaption>This game</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure class="thing-i-made">
+          <img class="cursor-pointer" onclick="goTo('https://www.raspberrypi.org/')" src="imgs/pi.png" alt="Raspberry Pi">
+          <figcaption>This thing</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="gap"></div>
+    <div class="gap"></div>
 
     <div class="text-center">
-      <img src="imgs/fb.png" class="cursor-pointer icon" alt="Facebook link" onclick="goTo('https://fb.com/tavuntu')" />
-      <img src="imgs/github.png" class="cursor-pointer icon" alt="GitHub link" onclick="goTo('https://github.com/tavuntu')" />
+      <img title="My Facebook profile" src="imgs/fb.png" class="cursor-pointer icon m-1" alt="Facebook link" onclick="goTo('https://fb.com/tavuntu')" />
+      <img title="My GitHub homepage" src="imgs/github.png" class="cursor-pointer icon m-1" alt="GitHub link" onclick="goTo('https://github.com/tavuntu')" />
     </div>
 
     <div class="text-center disclaimer">
