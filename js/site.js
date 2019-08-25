@@ -42,7 +42,7 @@ const goTo = url => window.open(url);
       }]
     },
     options: {
-      responsive: false,
+      responsive: true,
       legend: {
         display: false
       },
