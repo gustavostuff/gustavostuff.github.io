@@ -18,12 +18,14 @@ body {
   cursor: pointer;
 }
 
-.thing-i-made img:hover {
-  transform: scale(1.1);
-}
-
 .thing-i-made.smaller img {
   width: 170px;
+}
+
+.thing-i-made img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .thing-i-made figcaption {
@@ -48,7 +50,6 @@ body {
 
 .disclaimer {
   font-size: 0.7rem;
-  margin-top: 3rem;
   width: 100%;
 }
 
