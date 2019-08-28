@@ -1,6 +1,7 @@
 body {
   padding: 2rem;
   background-color: #eee;
+  font-family: 'Roboto', sans-serif;
 }
 
 .my-face {
@@ -13,7 +14,9 @@ body {
 }
 
 .card-image:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .icon-image {

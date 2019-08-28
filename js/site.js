@@ -1,6 +1,6 @@
 const goTo = url => window.open(url);
 
-// chart.js stuff:
+// Chart.js stuff
 
 let points = [
   [1, 2],
