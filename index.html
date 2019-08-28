@@ -1,134 +1,155 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/grid.css" />
-    <title>Gustavo Lara</title>
-  </head>
-  <body>
-    <div class="gap"></div>
-    
-    <div class="row single-col text-center">
-      <div>
-        <img class="my-face" src="imgs/me.jpg" alt="My face should be here" />
-      </div>
-      <div>
-        <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I like retro video games, Science (or Sci-Fi) and Technology. Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
-        <p class="about-me">I live with my wife and my son in Sonora, Mexico. We have some rough summers here.</p>
-      </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/grid.css" />
+  <title>Gustavo Lara</title>
+</head>
+
+<body>
+  <div class="gap"></div>
+
+  <div class="row d-flex align-items-center text-center">
+    <div class="col-12">
+      <img class="my-face" src="imgs/me.jpg" alt="My face should be here" />
     </div>
+    <div class="col-12 mt-4">
+      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I like retro video games, Science (or Sci-Fi) and
+        Technology. Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
+      <p class="about-me">I live with my wife and my son in Sonora, Mexico. We have some rough summers here.</p>
+    </div>
+  </div>
 
-    <div class="gap"></div>
-
-    <div class="row single-col text-center">
+  <div class="row d-flex align-items-center mt-5">
+    <div class="col-12 text-center">
       <h2>Some things I made</h2>
     </div>
+  </div>
 
-    <div class="row">
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/real-men`)" src="imgs/real-men.png" alt="real-men logo">
-          <figcaption>MEN stack API generator</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/gordan`)" src="imgs/gordan.png" alt="Gordan logo">
-          <figcaption>Gauss-Jordan + Regression JavaScript Library</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made smaller">
-          <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/gooi`)" src="imgs/gooi.png" alt="GOOi logo">
-          <figcaption>LÖVE GUI Library</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made smaller">
-          <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/niji`)" src="imgs/niji.png" alt="niji logo">
-          <figcaption>Non-serious styling for HTML elements</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/atari-love2d-demo`)" src="imgs/atari.gif" alt="My atari 2600-like game">
-          <figcaption>This retro game</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://tavuntu.github.io/`)" src="imgs/page.png" alt="My page">
-          <figcaption>This page</figcaption>
-        </figure>
-      </div>
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/real-men`)"
+          src="imgs/real-men.png" alt="real-men logo">
+        <figcaption class="mt-2">MEN stack API generator</figcaption>
+      </figure>
     </div>
-
-    <div class="gap"></div>
-
-    <div class="row single-col text-center">
-        <h2>Some things I like</h2>
-      </div>
-
-    <div class="row">
-      <div>
-        <figure class="thing-i-made">
-          <canvas height="295" id="chart"></canvas>
-          <figcaption>Graphics</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <iframe id="cube-iframe" height="340" src="" scrolling="no"></iframe>
-          <figcaption>Puzzles</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img onclick="goTo(`https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind`)" src="imgs/fio.gif" alt="Fio Piccolo" class="cursor-pointer" />
-          <figcaption>Anime</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://en.wikipedia.org/wiki/H._P._Lovecraft`)" src="imgs/lovecraft.jpg" alt="H. P. Lovecraft">
-          <figcaption>This man's writings</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)" src="imgs/super-vehicle.gif" alt="Metal Slug Super Vehicle">
-          <figcaption>This game</figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure class="thing-i-made">
-          <img class="cursor-pointer" onclick="goTo(`https://www.raspberrypi.org/`)" src="imgs/pi.png" alt="Raspberry Pi">
-          <figcaption>This thing</figcaption>
-        </figure>
-      </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gordan`)" src="imgs/gordan.png"
+          alt="Gordan logo">
+        <figcaption class="mt-2">Gauss-Jordan + Regression JavaScript Library</figcaption>
+      </figure>
     </div>
-
-    <div class="gap"></div>
-    <div class="gap"></div>
-
-    <div class="row single-col text-center">
-      <div>
-        <img title="My Facebook profile" src="imgs/fb.png" class="cursor-pointer icon m-1" alt="Facebook link" onclick="goTo(`https://fb.com/tavuntu`)" />
-        <img title="My GitHub homepage" src="imgs/github.png" class="cursor-pointer icon m-1" alt="GitHub link" onclick="goTo(`https://github.com/tavuntu`)" />
-      </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure class="thing-i-made smaller">
+        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gooi`)" src="imgs/gooi.png"
+          alt="GOOi logo">
+        <figcaption class="mt-2">LÖVE GUI Library</figcaption>
+      </figure>
     </div>
+  </div>
 
-    <div class="gap"></div>
-    <div class="gap"></div>
-
-    <div class="row single-col text-center">
-      <span class="disclaimer">The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of the owner</span>
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure class="thing-i-made smaller">
+        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/niji`)" src="imgs/niji.png"
+          alt="niji logo" />
+        <figcaption class="mt-2">Non-serious styling for HTML elements</figcaption>
+      </figure>
     </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/atari-love2d-demo`)"
+          src="imgs/atari.gif" alt="My atari 2600-like game" />
+        <figcaption class="mt-2">This retro game</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://tavuntu.github.io/`)" src="imgs/page.png"
+          alt="My page" />
+        <figcaption class="mt-2">This page</figcaption>
+      </figure>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <script src="js/gordan.js"></script>
-    <script src="js/site.js"></script>
-  </body>
+  <div class="row d-flex align-items-center mt-5">
+    <div class="col-12 text-center">
+      <h2>Some things I like</h2>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <canvas height="295" id="chart"></canvas>
+        <figcaption class="mt-2">Graphics</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <iframe id="cube-iframe" height="340" src="" scrolling="no"></iframe>
+        <figcaption class="mt-2">Puzzles</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image"
+          onclick="goTo(`https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind`)" src="imgs/fio.gif"
+          alt="Fio Piccolo" />
+        <figcaption class="mt-2">Anime</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/H._P._Lovecraft`)"
+          src="imgs/lovecraft.jpg" alt="H. P. Lovecraft" />
+        <figcaption class="mt-2">This man's writings</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)"
+          src="imgs/super-vehicle.gif" alt="Metal Slug Super Vehicle" />
+        <figcaption class="mt-2">This game</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://www.raspberrypi.org/`)" src="imgs/pi.png"
+          alt="Raspberry Pi" />
+        <figcaption class="mt-2">This thing</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-12 text-center">
+      <img title="My Facebook" src="imgs/fb.png" class="cursor-pointer icon-image" alt="Facebook link"
+        onclick="goTo(`https://fb.com/tavuntu`)" />
+      <img title="My GitHub homepage" src="imgs/github.png" class="cursor-pointer icon-image" alt="GitHub link"
+        onclick="goTo(`https://github.com/tavuntu`)" />
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-12 text-center">
+      <span class="small">The material on this site may not be reproduced, distributed, transmitted, cached or otherwise
+        used, except with the prior written permission of the owner.</span>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script src="js/gordan.js"></script>
+  <script src="js/site.js"></script>
+</body>
+
 </html>

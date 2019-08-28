@@ -1,74 +1,33 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
   background-color: #eee;
-  color: #555;
 }
 
 .my-face {
-  width: 200px;
-  border-radius: 100px;
+  width: 10rem;
+  border-radius: 5rem;
 }
 
-.thing-i-made img {
-  width: 230px;
-  position: relative;
+.card-image {
+  width: 15rem;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.icon-image {
+  width: 3rem;
+}
+
+.about-me {
+  font-size: 1.2rem;
 }
 
 .cursor-pointer {
   cursor: pointer;
 }
 
-.thing-i-made.smaller img {
-  width: 170px;
-}
-
-.thing-i-made img:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.thing-i-made figcaption {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.about-me {
-  padding-left: 10%;
-  padding-right: 10%;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.gap {
-  padding: 1rem;
-}
-
-.disclaimer {
-  font-size: 0.7rem;
-  width: 100%;
-}
-
-.icon {
-  width: 50px;
-}
-
-.m-1 { margin: 1rem; }
-.m-2 { margin: 2rem; }
-.m-3 { margin: 3rem; }
-
-.p-1 { padding: 1rem; }
-.p-2 { padding: 2rem; }
-.p-3 { padding: 3rem; }
-
 iframe {
   border: none;
-}
-
-canvas {
-  margin: 0 auto;
 }
