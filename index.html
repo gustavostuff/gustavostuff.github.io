@@ -13,14 +13,12 @@
 <body>
   <div class="gap"></div>
 
-  <div class="row d-flex align-items-sm-center align-items-md-end text-center">
-    <div class="col-12">
+  <div class="row d-flex align-items-center">
+    <div class="col-sm-12 col-md-3 text-sm-center text-md-right">
       <img class="my-face" src="imgs/me.jpg" alt="My face should be here" />
     </div>
-    <div class="col-12 mt-4">
-      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I like retro video games, Science (Sci-Fi too) and
-        Technology. Have you seen Conway's Game of Life or Langton's Ant? I love those things.</p>
-      <p class="about-me">I live with my wife and my son in Sonora, Mexico. We have some rough summers here.</p>
+    <div class="col-sm-12 col-md-8 text-sm-center text-md-left mt-sm-4">
+      <p class="about-me">Hi, My name is Gustavo and I'm a Software Engineer. I live with my wife and my son in Sonora, Mexico. We have some rough summers here.</p>
     </div>
   </div>
 
@@ -31,21 +29,21 @@
   </div>
 
   <div class="row d-flex align-items-sm-center align-items-md-end mt-4">
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/real-men`)"
           src="imgs/real-men.png" alt="real-men logo">
         <figcaption class="mt-2">MEN stack API generator</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gordan`)" src="imgs/gordan.png"
           alt="Gordan logo">
         <figcaption class="mt-2">Gauss-Jordan + Regression JavaScript Library</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure class="thing-i-made smaller">
         <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gooi`)" src="imgs/gooi.png"
           alt="GOOi logo">
@@ -55,21 +53,21 @@
   </div>
 
   <div class="row d-flex align-items-sm-center align-items-md-end mt-4">
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure class="thing-i-made smaller">
         <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/niji`)" src="imgs/niji.png"
           alt="niji logo" />
         <figcaption class="mt-2">Non-serious styling for HTML elements</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/atari-love2d-demo`)"
           src="imgs/atari.gif" alt="My atari 2600-like game" />
         <figcaption class="mt-2">This retro game</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://tavuntu.github.io/`)" src="imgs/page.png"
           alt="My page" />
@@ -85,57 +83,79 @@
   </div>
 
   <div class="row d-flex align-items-sm-center align-items-md-end mt-4">
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <canvas height="295" id="chart"></canvas>
         <figcaption class="mt-2">Graphics</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <iframe id="cube-iframe" height="340" src="" scrolling="no"></iframe>
         <figcaption class="mt-2">Puzzles</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
-        <img class="cursor-pointer card-image"
-          onclick="goTo(`https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind`)" src="imgs/fio.gif"
-          alt="Fio Piccolo" />
-        <figcaption class="mt-2">Anime</figcaption>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Mbira`)" src="imgs/mbira.png" />
+        <figcaption class="mt-2">To play music</figcaption>
       </figure>
     </div>
   </div>
 
   <div class="row d-flex align-items-sm-center align-items-md-end mt-4">
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/H._P._Lovecraft`)"
           src="imgs/lovecraft.jpg" alt="H. P. Lovecraft" />
         <figcaption class="mt-2">This man's writings</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)"
-          src="imgs/super-vehicle.gif" alt="Metal Slug Super Vehicle" />
-        <figcaption class="mt-2">This game</figcaption>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Stephen_King`)"
+          src="imgs/king.jpg" alt="Stephen King" />
+        <figcaption class="mt-2">This man's writings</figcaption>
       </figure>
     </div>
-    <div class="col-sm-12 col-lg-4 text-center">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <figure>
+        <img class="cursor-pointer card-image"
+          onclick="goTo(`https://en.wikipedia.org/wiki/One_Piece`)" src="imgs/luffy.jpg"
+          alt="Luffy" />
+        <figcaption class="mt-2">Anime/Manga</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row d-flex align-items-sm-center align-items-md-end mt-4">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life`)" src="imgs/glider-gun.gif" />
+        <figcaption class="mt-2">Turing machines</figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://www.raspberrypi.org/`)" src="imgs/pi.png"
           alt="Raspberry Pi" />
         <figcaption class="mt-2">This thing</figcaption>
       </figure>
     </div>
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <figure>
+        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)"
+          src="imgs/super-vehicle.gif" alt="Metal Slug Super Vehicle" />
+        <figcaption class="mt-2">This game</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="row d-flex align-items-sm-center align-items-md-end mt-5">
     <div class="col-12 text-center">
-      <img title="My Facebook" src="imgs/fb.png" class="cursor-pointer icon-image" alt="Facebook link"
+      <img title="My Facebook" src="imgs/fb.png" class="cursor-pointer icon-image m-1" alt="Facebook link"
         onclick="goTo(`https://fb.com/tavuntu`)" />
-      <img title="My GitHub homepage" src="imgs/github.png" class="cursor-pointer icon-image" alt="GitHub link"
+      <img title="My GitHub homepage" src="imgs/github.png" class="cursor-pointer icon-image m-1" alt="GitHub link"
         onclick="goTo(`https://github.com/tavuntu`)" />
     </div>
   </div>
