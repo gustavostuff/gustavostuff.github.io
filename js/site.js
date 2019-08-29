@@ -1,6 +1,6 @@
+const goTo = url => window.open(url);
+
 (() => {
-  const goTo = url => window.open(url);
-  
   document.onload = () => {
     
     // Chart.js stuff
