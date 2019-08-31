@@ -37,3 +37,45 @@ body {
 iframe {
   border: none;
 }
+
+figcaption {
+  position: relative;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+#keanu {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+figure img:hover ~ figcaption {
+  opacity: 0;
+}
+
+figure img.insistent:hover {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: evenBigger;
+          animation-name: evenBigger;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes evenBigger {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes evenBigger {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}

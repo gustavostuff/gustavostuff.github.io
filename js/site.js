@@ -1,6 +1,46 @@
 const goTo = url => window.open(url);
 
-(() => {
+let keanuActivated = false;
+
+const getKeanu = () => document.querySelector('#keanu');
+
+// ugly JS starts
+
+const toggleKeanu = () => {
+  keanuActivated = !keanuActivated;
+
+  if (keanuActivated) {
+    getKeanu().style.display = 'block';
+
+    const cursorBtn = document.querySelector("#cursor-btn");
+
+    cursorBtn.classList.remove('btn-danger');
+    cursorBtn.classList.add('btn-info');
+    cursorBtn.innerHTML = 'Normal cursor';
+
+    document.querySelectorAll('*').forEach(item => {
+      item.setAttribute('style', 'cursor: none !important');
+    });
+  } else {
+    getKeanu().style.display = 'none';
+
+    const cursorBtn = document.querySelector("#cursor-btn");
+
+    cursorBtn.classList.remove('btn-info');
+    cursorBtn.classList.add('btn-danger');
+    cursorBtn.innerHTML = 'Keanu cursor';
+    
+    document.querySelectorAll('*').forEach(item => {
+      if (item.getAttribute('id') != 'keanu') {
+        item.setAttribute('style', 'cursor: default');
+      }
+    });
+  }
+};
+
+// ugly JS ends
+
+;(() => {
   let points = [
     [1, 2],
     [1.5, 4],
@@ -19,7 +59,7 @@ const goTo = url => window.open(url);
   let curve = Gordan.getQuadraticRegressionCurve(points);
   let gradeSixCurve = Gordan.getRegressionPath(points, 6);
   
-  let chart = new Chart(document.getElementById('chart'), {
+  let chart = new Chart(document.querySelector('#chart'), {
     type: 'scatter',
     data: {
       datasets: [{
@@ -50,4 +90,16 @@ const goTo = url => window.open(url);
       }
     }
   });
-})();
+
+  // keanu cursor movement
+
+  const moveKeanu = event => {
+    const keanu = getKeanu();
+
+    keanu.style.left = `${event.pageX}px`;
+    keanu.style.top = `${event.pageY - 80}px`;
+  };
+
+  window.addEventListener("mousemove", moveKeanu, false);
+
+})()
