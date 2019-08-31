@@ -1,46 +1,36 @@
 const goTo = url => window.open(url);
 
-let keanuActivated = false;
+const $ = q => {
+  let results = document.querySelectorAll(q);
+  return results.length == 1 ? results[0] : results;
+};
 
-const getKeanu = () => document.querySelector('#keanu');
+const getKeanuCursor = () => $('#keanu');
 
-// ugly JS starts
+const toggleKeanu = value => {
+  getKeanuCursor().style.display = value ? 'block' : 'none';
+  $('#keanu-btn').style.display = value ? 'none' : 'inline-block';
+  $('#not-keanu-btn').style.display = value ? 'inline-block' : 'none';
+};
 
-const toggleKeanu = () => {
-  keanuActivated = !keanuActivated;
-
-  if (keanuActivated) {
-    getKeanu().style.display = 'block';
-
-    const cursorBtn = document.querySelector("#cursor-btn");
-
-    cursorBtn.classList.remove('btn-danger');
-    cursorBtn.classList.add('btn-info');
-    cursorBtn.innerHTML = 'Normal cursor';
-
-    document.querySelectorAll('*').forEach(item => {
-      item.setAttribute('style', 'cursor: none !important');
-    });
+const verifyNotMobile = () => {
+  if (
+    !(navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    )
+  ) {
+    $('#keanu-btn').style.display = 'inline-block';
   } else {
-    getKeanu().style.display = 'none';
-
-    const cursorBtn = document.querySelector("#cursor-btn");
-
-    cursorBtn.classList.remove('btn-info');
-    cursorBtn.classList.add('btn-danger');
-    cursorBtn.innerHTML = 'Keanu cursor';
-    
-    document.querySelectorAll('*').forEach(item => {
-      if (item.getAttribute('id') != 'keanu') {
-        item.setAttribute('style', 'cursor: default');
-      }
-    });
+    $('.keanu-zone').remove();
   }
 };
 
-// ugly JS ends
-
-;(() => {
+(() => {
   let points = [
     [1, 2],
     [1.5, 4],
@@ -54,12 +44,12 @@ const toggleKeanu = () => {
     [6.5, 13],
     [7, 12.5]
   ];
-  
+
   let rect = Gordan.getLinearRegressionRect(points);
   let curve = Gordan.getQuadraticRegressionCurve(points);
   let gradeSixCurve = Gordan.getRegressionPath(points, 6);
-  
-  let chart = new Chart(document.querySelector('#chart'), {
+
+  new Chart($('#chart'), {
     type: 'scatter',
     data: {
       datasets: [{
@@ -86,7 +76,7 @@ const toggleKeanu = () => {
         display: false
       },
       tooltips: {
-          enabled: false
+        enabled: false
       }
     }
   });
@@ -94,21 +84,13 @@ const toggleKeanu = () => {
   // keanu cursor movement
 
   const moveKeanu = event => {
-    const keanu = getKeanu();
+    const keanu = getKeanuCursor();
 
     keanu.style.left = `${event.pageX}px`;
     keanu.style.top = `${event.pageY - 80}px`;
   };
 
-  window.addEventListener("mousemove", moveKeanu, false);
+  window.addEventListener('mousemove', moveKeanu, false);
 
-  if (navigator.userAgent.match(/Android/i)
-  || navigator.userAgent.match(/webOS/i)
-  || navigator.userAgent.match(/iPhone/i)
-  || navigator.userAgent.match(/iPad/i)
-  || navigator.userAgent.match(/iPod/i)
-  || navigator.userAgent.match(/BlackBerry/i)
-  || navigator.userAgent.match(/Windows Phone/i)) {
-    document.querySelector('#cursor-btn').style.display = 'none';
-  };
-})()
+  verifyNotMobile();
+})();
