@@ -27,6 +27,7 @@ const verifyNotMobile = () => {
     $('#keanu-btn').style.display = 'inline-block';
   } else {
     $('.keanu-zone').remove();
+    $('#find-keanu-span').remove();
   }
 };
 
