@@ -62,6 +62,12 @@ body {
   left: 0;
 }
 
+.keanu-div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
 iframe {
   border: none;
 }

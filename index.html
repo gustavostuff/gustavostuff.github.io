@@ -13,8 +13,6 @@
 <body>
   <img style="display: none" id="keanu" src="imgs/keanu.png" alt="" />
 
-  <div class="gap"></div>
-
   <div class="row d-flex align-items-center">
     <div class="col-12 text-center">
       <img class="my-face" src="imgs/me.jpg" alt="My face should be here" title="This is me" />
@@ -23,11 +21,6 @@
       <p class="about-me">
         Hi, my name is Gustavo and I'm a Software Engineer. I live with my wife and my son in Sonora,
         Mexico. We have rough summers around here.
-      </p>
-      <p class="about-me">
-        <button
-          onclick="goTo('https://docs.google.com/document/d/1T6cKepCzVgaAIL8AlNTDItSuwR87fj3bVJzrqOd4Og4/edit?usp=sharing')"
-          class="btn btn-secondary">Here's my CV</button>
       </p>
     </div>
   </div>
@@ -164,6 +157,13 @@
     </div>
   </div>
 
+  <div class="row d-flex align-items-center keanu-zone">
+    <div class="col-12 text-center pr-0">
+      <div id="keanu-btn" onclick="toggleKeanu(true)" class="keanu-div bg-danger" style="display: none"></div>
+      <div id="not-keanu-btn" onclick="toggleKeanu(false)" class="keanu-div bg-info" style="display: none"></div>
+    </div>
+  </div>
+
   <div class="row d-flex align-items-center mt-5">
     <div class="col-12 text-center">
       <img title="My Facebook" src="imgs/fb.png" class="cursor-pointer icon-image m-1" alt="Facebook link"
@@ -173,10 +173,11 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center keanu-zone">
-    <div class="col-12 text-center">
-      <button id="keanu-btn" onclick="toggleKeanu(true)" class="btn btn-danger" style="display: none"></button>
-      <button id="not-keanu-btn" onclick="toggleKeanu(false)" class="btn btn-info" style="display: none"></button>
+  <div class="row">
+    <div class="col-12 text-center mt-2">
+      <button
+        onclick="goTo('https://docs.google.com/document/d/1T6cKepCzVgaAIL8AlNTDItSuwR87fj3bVJzrqOd4Og4/edit?usp=sharing')"
+        class="btn btn-link">Here's my CV</button>
     </div>
   </div>
 
