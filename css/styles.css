@@ -22,7 +22,7 @@ body {
 }
 
 .card-image.normal-size {
-  width: 100%;
+  width: auto;
 }
 
 .icon-image {
