@@ -21,10 +21,6 @@ body {
   transition: all 0.15s ease-in-out;
 }
 
-.card-image.normal-size {
-  width: auto;
-}
-
 .icon-image {
   width: 3rem;
   -webkit-transition: all 0.15s ease-in-out;
