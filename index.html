@@ -13,6 +13,13 @@
 <body>
   <img style="display: none" id="keanu" src="img/keanu.png" alt="" />
 
+  <div class="row d-flex align-items-center keanu-zone">
+    <div class="col-12 text-center pr-0">
+      <div id="keanu-btn" onclick="toggleKeanu(true)" class="keanu-div bg-danger" style="display: none"></div>
+      <div id="not-keanu-btn" onclick="toggleKeanu(false)" class="keanu-div bg-info" style="display: none"></div>
+    </div>
+  </div>
+
   <div class="row d-flex align-items-center">
     <div class="col-12 text-center">
       <img class="my-face" src="img/me.jpg" alt="My face should be here" title="This is me" />
@@ -112,40 +119,6 @@
   <div class="row d-flex align-items-center mt-4">
     <div class="col-sm-12 col-lg-4 text-center mt-4">
       <figure>
-        <p class="font-italic">
-          Then did the bearded man say to me with tears on his cheek:
-          “We have rejected the beautiful Land of Sona-Nyl,
-          which we may never behold again. The gods are greater than men, and they have conquered.”
-          And I closed my eyes before the crash that I knew would come,
-          shutting out the sight of the celestial bird which flapped its mocking blue wings over the brink of the torrent.
-        </p>
-      </figure>
-      <figcaption class="mt-2">— H. P. Lovecraft</figcaption>
-    </div>
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <p class="font-italic">
-          “Kill if you will, but command me nothing!” the gunslinger roared. “You have forgotten the faces of
-          those who made you! Now either kill us or be silent and listen to me, Roland of Gilead, son of Steven,
-          gunslinger, and lord of the ancient lands!
-        </p>
-        <figcaption class="mt-2">— Stephen King</figcaption>
-      </figure>
-    </div>
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <p class="font-italic">
-          “Don't ever think there's any perfect society made by humans!
-          If you think that way you'll overlook the enemy! Don't be fooled by appearances!”
-        </p>
-        <figcaption class="mt-2">— Eiichirō Oda</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
         <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life`)"
           src="img/breeder.gif" title="Breeder, one of many Game of Life patterns" />
         <figcaption class="mt-2">Automatons and AI</figcaption>
@@ -167,10 +140,30 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center keanu-zone">
-    <div class="col-12 text-center pr-0">
-      <div id="keanu-btn" onclick="toggleKeanu(true)" class="keanu-div bg-danger" style="display: none"></div>
-      <div id="not-keanu-btn" onclick="toggleKeanu(false)" class="keanu-div bg-info" style="display: none"></div>
+  <div class="row d-flex align-items-center mt-4">
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <p class="font-italic">
+        “The other gods! The other gods! The gods of the outer hells that guard the feeble gods of earth!...
+        Look away!... Go back!... Do not see!... Do not see!...
+        The vengeance of the infinite abysses... That cursed, that damnable pit...
+        Merciful gods of earth, I am falling into the sky!”
+      </p>
+      <p>— H. P. Lovecraft</p>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <p class="font-italic">
+        “Kill if you will, but command me nothing!” the gunslinger roared. “You have forgotten the faces of
+        those who made you! Now either kill us or be silent and listen to me, Roland of Gilead, son of Steven,
+        gunslinger, and lord of the ancient lands!
+      </p>
+      <p>— Stephen King</p>
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center mt-4">
+      <p class="font-italic">
+        “When do you think people die? When they are shot through the heart by the bullet of a pistol? No.
+        When they are ravaged by an incurable disease? No... It’s when they're forgotten!”
+      </p>
+      <p>— Eiichirō Oda</p>
     </div>
   </div>
 
