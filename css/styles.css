@@ -72,6 +72,11 @@ iframe {
   border: none;
 }
 
+.vela-iframe {
+  width: 100%;
+  height: 25rem;
+}
+
 figcaption {
   position: relative;
   -webkit-transition: all 0.15s ease-in-out;
