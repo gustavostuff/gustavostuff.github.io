@@ -87,8 +87,10 @@ const verifyNotMobile = () => {
   const moveKeanu = event => {
     const keanu = getKeanuCursor();
 
-    keanu.style.left = `${event.pageX}px`;
-    keanu.style.top = `${event.pageY - 80}px`;
+    if (keanu.style.display != 'none') {
+      keanu.style.left = `${event.pageX}px`;
+      keanu.style.top = `${event.pageY - 80}px`;
+    }
   };
 
   window.addEventListener('mousemove', moveKeanu, false);
