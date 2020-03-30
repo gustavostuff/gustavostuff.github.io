@@ -105,6 +105,9 @@ let interactiveChart;
       tooltips: {
         enabled: false
       },
+      onTouchstart: function () {
+        alert('test');
+      },
       onClick: function (element) {
         if (this.data.datasets[0].data.length >= MAX_POINTS_ALLOWED){
           alert("OK, that's enough.");
