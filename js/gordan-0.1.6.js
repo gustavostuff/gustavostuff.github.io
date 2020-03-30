@@ -5,6 +5,7 @@
  * Returns an Object containing Gordan API, some functions are "private"
  */
 const Gordan = (() => {
+  const DEFAULT_GRANULARITY = 0.1;
   const API = {
     /**
      * Adds 2 rows
@@ -138,7 +139,7 @@ const Gordan = (() => {
      * @param {number} granularity - The regression curve resolution
      * @returns {x, y}[] The list of points on the plane to draw the curve
      */
-    getRegressionPath(points, degreeOfEquation, granularity = 0.1) {
+    getRegressionPath(points, degreeOfEquation, granularity = DEFAULT_GRANULARITY) {
       let curvePoints = []
       let regressionMatrix = this.getRegressionMatrixFromPoints(points, degreeOfEquation)
       let curveCoefficients = this.getSymbolValues(regressionMatrix)
@@ -161,16 +162,16 @@ const Gordan = (() => {
      * @param {number[]} points - The list of points on the plane
      * @returns {x, y}[] The list of points on the plane to draw the curve
      */
-    getQuadraticRegressionCurve(points) {
-      return this.getRegressionPath(points, 2)
+    getQuadraticRegressionCurve(points, degree = 2, granularity = DEFAULT_GRANULARITY) {
+      return this.getRegressionPath(points, degree, granularity)
     },
     /**
      * Calls Gordan.getRegressionPath for a linear grade equation
      * @param {number[]} points - The list of points on the plane
      * @returns {x, y}[] The list of points on the plane to draw the line
      */
-    getLinearRegressionRect(points) {
-      return this.getRegressionPath(points, 1)
+    getLinearRegressionRect(points, degree = 1, granularity = DEFAULT_GRANULARITY) {
+      return this.getRegressionPath(points, degree, granularity)
     }
   }
 
