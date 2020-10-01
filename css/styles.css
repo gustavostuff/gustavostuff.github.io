@@ -5,9 +5,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.my-face {
-  width: 10rem;
-  border-radius: 5rem;
+.main-picture {
+  width: 14rem;
+  border-radius: 1rem;
 }
 
 .about-me {
