@@ -42,12 +42,22 @@ let points = [
 
 let interactiveChart;
 
+const toggleDarkTheme = () => {
+  document.querySelector('body').classList.toggle('dark-theme');
+};
+
 (() => {
   let pointsCopy = [...points];
   let rect = Gordan.getLinearRegressionRect(pointsCopy);
   let curve = Gordan.getQuadraticRegressionCurve(pointsCopy);
   let gradeSixCurve = Gordan.getRegressionPath(pointsCopy, 6);
   let canvas = $('#chart');
+
+  window.addEventListener('keypress', (evt) => {
+    if (evt.key && evt.key.toLocaleLowerCase() === 'd') {
+      toggleDarkTheme()
+    }
+  });
 
   interactiveChart = new Chart(canvas, {
     type: 'scatter',
@@ -60,18 +70,35 @@ let interactiveChart;
       }, {
         label: 'Linear regression rect',
         data: rect,
-        backgroundColor: 'rgba(204, 0, 0, 0.5)'
+        backgroundColor: 'rgba(204, 0, 0, 0.3)'
       }, {
         label: 'Quadratic regression curve',
         data: curve,
-        backgroundColor: 'rgba(0, 126, 51, 0.5)'
+        backgroundColor: 'rgba(0, 126, 51, 0.3)'
       }, {
         label: 'Grade 6 regression curve',
         data: gradeSixCurve,
-        backgroundColor: 'rgba(0, 153, 204, 0.5)'
+        backgroundColor: 'rgba(0, 153, 204, 0.3)'
       }]
     },
     options: {
+      grid: {
+        color: '#f00'
+      },
+      scales: {
+        xAxes: [{
+          display: true,
+          gridLines: {
+            color: 'rgba(127, 127, 127, 0.5)'
+          },
+        }],
+        yAxes: [{
+          display: true,
+          gridLines: {
+            color: 'rgba(127, 127, 127, 0.5)'
+          },
+        }]
+      },
       maintainAspectRatio: false,
       responsive: true,
       legend: {
