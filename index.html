@@ -3,186 +3,125 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <title>Gustavo</title>
 </head>
 
 <body>
-  <img style="display: none" id="keanu" src="img/keanu.png" alt="" />
-
-  <div class="row d-flex align-items-center keanu-zone">
-    <div class="col-12 text-center pr-0">
-      <div id="keanu-btn" onclick="toggleKeanu(true)" class="keanu-div bg-danger" style="display: none"></div>
-      <div id="not-keanu-btn" onclick="toggleKeanu(false)" class="keanu-div bg-info" style="display: none"></div>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-center">
-    <div class="col-12 text-center">
-      <img class="main-picture" src="img/me.jpg" alt="A picture of my friends" title="This is me and some friends" />
-    </div>
-    <div class="col-12 text-center mt-4">
-      <p class="about-me">
+  <div class="row">
+    <div class="column">
+      <img src="img/me.jpg" class="profile-img"
+        alt="A picture of my friends" title="This is me and some friends" />
+      <p>
         Hi, my name is Gustavo and I'm a Software Engineer. I live with my wife and my son in Sonora,
         Mexico. We have rough summers around here.
       </p>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center my-5">
-    <div class="col-12 text-center">
-      <h2>Some things I made</h2>
-    </div>
+  <div class="row">
+    <h2 class="text-center">Some things I made</h2>
   </div>
 
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <p>
-          <img class="cursor-pointer card-image w-25" onclick="goTo(`https://github.com/tavuntu/gordan`)" src="img/gordan.png"
-          alt="Gordan logo" title="Gauss-Jordan + Regression JavaScript Library" />
-        </p>
-        <canvas height="200" id="chart"></canvas>
-        <div class="row">
-          <div class="col-12">Gauss-Jordan + Regression JavaScript Library. Click on the chart to add points</div>
-          <div class="col-12 text-right">
-            <button class="btn btn-sm btn-primary" id="reset-points">Reset</button>
-          </div>
+  <div class="row">
+    <div class="column">
+      <div class="chart-container">
+        <canvas id="chart"></canvas>
+      </div>
+      <div class="row">
+        <p>Gauss-Jordan + Regression JavaScript Library. Click on the chart to add points</p>
+        <div class="text-center">
+          <button id="reset-points">Reset</button>
+          <button onclick="goTo(`https://github.com/tavuntu/gordan`)">GitHub page</button>
         </div>
-      </figure>
+      </div>
+    </div class="column">
+
+    <div class="column">
+      <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/boinboin`)"
+        src="img/example_3_boinboin.gif" alt="BoinBoin logo" title="BoinBoin" />
+      <p>BoinBoin - Mathematically accurate bouncing ball (library)</p>
     </div>
 
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer" onclick="goTo(`https://github.com/tavuntu/boinboin`)"
-          src="img/example_3_boinboin.gif" alt="BoinBoin logo" title="BoinBoin" />
-        <figcaption class="custom-figcaption mt-2">BoinBoin - Mathematically accurate bouncing ball (library)</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure class="thing-i-made smaller">
-        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gooi`)" src="img/gooi.png"
-          alt="GOOi logo" title="Love2D GUI Library" />
-        <figcaption class="custom-figcaption mt-2">Love2D GUI Library</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-  </div>
-
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure class="thing-i-made smaller">
-        <img class="cursor-pointer card-image" onclick="goTo(`https://tavuntu.github.io/niji/`)" src="img/niji.png"
-          alt="niji logo" title="Childish styles for HTML elements" />
-        <figcaption class="custom-figcaption mt-2">Childish styles for HTML elements</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/tabox2d`)"
-          src="img/tabox2d.png" alt="Tabox2D" title="An easier way to create basic interactions for 2D bodies on libGDX" />
-        <figcaption class="custom-figcaption mt-2">Box2D support for libGDX</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/crt-ready-retropie`)" src="img/retropie.png"
-          alt="My page" title="Look at this if you're into CRT emulation" />
-        <figcaption class="custom-figcaption mt-2">A CRT-ready RetroPie setup</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-  </div>
-
-  <div class="row d-flex align-items-center my-5">
-    <div class="col-12 text-center">
-      <h2>Some things I like</h2>
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/gooi`)" src="img/gooi.png"
+        alt="GOOi logo" title="Love2D GUI Library" />
+      <p>Love2D GUI Library</p>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://drive.google.com/file/d/1Pa63_8czVIEswFTBmEc5Reod1wmkxHls/view?usp=sharing`)" src="img/ocarina.png"
-          alt="Music" title="This is a link to a video of a friend and I playing the guitar (or trying to). This was in high school." />
-        <figcaption class="custom-figcaption mt-2">Music</figcaption>
-      </figure>
+  <div class="row">
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://tavuntu.github.io/niji/`)" src="img/niji.png"
+        alt="niji logo" title="Childish styles for HTML elements" />
+      <p>Childish styles for HTML elements</p>
     </div>
 
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <iframe
-          class="custom-iframe"
-          id="cube-iframe"
-          height="340"
-          src="https://ruwix.com/widget/3d/?alg=F%20R'%20U'%20F'%20U%20L'%20B%20U'%20B2%20U'%20F'%20R'%20B%20R2%20F%20U%20L%20U&setupmoves=F%20R'%20U'%20F'%20U%20L'%20B%20U'%20B2%20U'%20F'%20R'%20B%20R2%20F%20U%20L%20U&flags=showalg"
-          scrolling="no">
-        </iframe>
-        <figcaption class="custom-figcaption mt-2">Puzzles</figcaption>
-      </figure>
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/tabox2d`)"
+        src="img/tabox2d.png" alt="Tabox2D" title="An easier way to create basic interactions for 2D bodies on libGDX" />
+      <p>Box2D support for libGDX</p>
     </div>
 
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-4 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Nachos`)"
-          src="img/nachos.jpg" title="I really like nachos, tacos and other mexican food" />
-        <figcaption class="custom-figcaption mt-2">Nachos</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-  </div>
-
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-sm-12 col-lg-6 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)"
-          src="img/super-vehicle.gif" alt="Metal Slug Super Vehicle" title="Super Vehicle from Metal Slug" />
-        <figcaption class="custom-figcaption mt-2">Retro video games</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-    <div class="col-sm-12 col-lg-6 text-center mt-4">
-      <figure>
-        <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life`)"
-          src="img/gol.gif" title="Gosper's glider gun" />
-        <figcaption class="custom-figcaption mt-2">AI, Automata, IoT, all that craft</figcaption>
-      </figure>
-    </div>
-
-    <div class="col-12 d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-  </div>
-
-  <div class="row d-flex align-items-center mt-5 mb-3">
-    <div class="col-sm-12 text-center">
-      I don't read a lot but these blew my mind when I ran into them:
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://github.com/tavuntu/crt-ready-retropie`)" src="img/retropie.png"
+        alt="My page" title="Look at this if you're into CRT emulation" />
+      <p>A CRT-ready RetroPie setup</p>
     </div>
   </div>
 
-  <div class="row d-flex align-items-center">
-    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center my-4">
+  <div class="row">
+    <h2 class="text-center">Some things I like</h2>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://drive.google.com/file/d/1Pa63_8czVIEswFTBmEc5Reod1wmkxHls/view?usp=sharing`)" src="img/ocarina.png"
+        alt="Music" title="This is a link to a video of a friend and I playing the guitar (or trying to). This was in high school." />
+      <p>Music</p>
+    </div>
+
+    <div class="column">
+      <iframe
+        class="cube-iframe"
+        id="cube-iframe"
+        height="340"
+        src="https://ruwix.com/widget/3d/?alg=F%20R'%20U'%20F'%20U%20L'%20B%20U'%20B2%20U'%20F'%20R'%20B%20R2%20F%20U%20L%20U&setupmoves=F%20R'%20U'%20F'%20U%20L'%20B%20U'%20B2%20U'%20F'%20R'%20B%20R2%20F%20U%20L%20U&flags=showalg"
+        scrolling="no">
+      </iframe>
+      <p>Puzzles</p>
+    </div>
+
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Nachos`)"
+        src="img/nachos.jpg" title="I really like nachos, tacos and other mexican food" />
+      <p>Nachos</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Metal_Slug`)"
+        src="img/super-vehicle.gif" alt="Metal Slug Super Vehicle" title="Super Vehicle from Metal Slug" />
+      <p>Retro video games</p>
+    </div>
+
+    <div class="column">
+      <img class="cursor-pointer card-image" onclick="goTo(`https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life`)"
+        src="img/gol.gif" title="Gosper's glider gun" />
+      <p>AI, Automata, IoT, all that craft</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <p>I don't read a lot but these blew my mind when I ran into them:</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
       <p class="font-italic">
         "The other gods! The other gods! The gods of the outer hells that guard the feeble gods of earth!...
         Look away!... Go back!... Do not see!... Do not see!...
@@ -193,10 +132,8 @@
     </div>
   </div>
 
-  <div class="row d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-  <div class="row d-flex align-items-center">
-    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center my-4">
+  <div class="row">
+    <div class="column">
       <p class="font-italic">
         "Kill if you will, but command me nothing!" the gunslinger roared.
         "You have forgotten the faces of those who made you! Now either kill us or be silent and listen to me,
@@ -206,10 +143,8 @@
     </div>
   </div>
 
-  <div class="row d-sm-block d-md-block d-lg-none d-xl-none border-top my-4"></div>
-
-  <div class="row d-flex align-items-center">
-    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center my-4">
+  <div class="row">
+    <div class="column">
       <p class="font-italic">
         Finally, in the far future trillions of years from now, humanity has outgrown the confines of matter itself.
         Humans have evolved into pure energy beings that can transport themselves across the galaxy.
@@ -224,17 +159,15 @@
     </div>
   </div>
 
-  <div class="row d-flex align-items-center my-5">
-    <div class="col-12 text-center">
-      <a class="mx-2 link linkedin" href="https://www.linkedin.com/in/tavuntu/">LinkedIn</a>
-      <a class="mx-2 link github" href="https://github.com/tavuntu">GitHub</a>
-      <a class="mx-2 link cv" href="https://docs.google.com/document/d/1SKM1-HQDSqldhjZaq1YCa_mzbwE6Ak4lbCwf8xfZyQo/edit?usp=sharing">My CV</a>
-    </div>
+  <div class="text-center">
+    <a class="link" href="https://www.linkedin.com/in/tavuntu/">LinkedIn</a>
+    <a class="link" href="https://github.com/tavuntu">GitHub</a>
+    <a class="link" href="https://docs.google.com/document/d/1SKM1-HQDSqldhjZaq1YCa_mzbwE6Ak4lbCwf8xfZyQo/edit?usp=sharing">My CV</a>
   </div>
 
-  <div class="row d-flex align-items-center mt-5">
-    <div class="col-12 text-center">
-      <p class="small text-muted">Thanks to pngimage.net (Ocarina), Khg808 (Nachos image), Ruwix (Interactive 3D cube) and Kieff (Conway's Game of Life animation). <span id="find-keanu-span">Now find the hidden Keanu Reeves.</span></p>
+  <div class="row">
+    <div class="column">
+      <p>Thanks to pngimage.net (Ocarina), Khg808 (Nachos image), Ruwix (Interactive 3D cube) and Kieff (Conway's Game of Life animation).</p>
     </div>
   </div>
 

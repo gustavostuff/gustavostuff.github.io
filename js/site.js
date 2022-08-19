@@ -8,32 +8,6 @@ const $ = q => {
   return results.length == 1 ? results[0] : results;
 };
 
-const getKeanuCursor = () => $('#keanu');
-
-const toggleKeanu = value => {
-  getKeanuCursor().style.display = value ? 'block' : 'none';
-  $('#keanu-btn').style.display = value ? 'none' : 'inline-block';
-  $('#not-keanu-btn').style.display = value ? 'inline-block' : 'none';
-};
-
-const verifyNotMobile = () => {
-  if (
-    !(navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    )
-  ) {
-    $('#keanu-btn').style.display = 'inline-block';
-  } else {
-    $('.keanu-zone').remove();
-    $('#find-keanu-span').remove();
-  }
-};
-
 const calculateGranularity = () => {
   let xAxisMin = interactiveChart.scales['x-axis-1'].min;
   let xAxisMax = interactiveChart.scales['x-axis-1'].max;
@@ -140,19 +114,6 @@ let interactiveChart;
     }
   });
 
-  // keanu cursor movement
-
-  const moveKeanu = event => {
-    const keanu = getKeanuCursor();
-
-    if (keanu.style.display != 'none') {
-      keanu.style.left = `${event.pageX}px`;
-      keanu.style.top = `${event.pageY - 80}px`;
-    }
-  };
-
-  window.addEventListener('mousemove', moveKeanu, false);
-
   $('#reset-points').onclick = () => {
     let originalPoints = points;
     interactiveChart.data.datasets[0].data = Gordan.normalizePoints(originalPoints);
@@ -160,5 +121,9 @@ let interactiveChart;
     interactiveChart.update();
   };
 
-  verifyNotMobile();
+  fetch('https://api.github.com/repos/tavuntu/gooi')
+  .then(data => {
+    console.log('data.stargazers_count:', data.json());
+  })
+  .catch(error => console.error(error));
 })();
