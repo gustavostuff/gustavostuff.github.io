@@ -72,6 +72,7 @@ let interactiveChart;
       }]
     },
     options: {
+      maintainAspectRatio: false,
       responsive: true,
       legend: {
         display: false
