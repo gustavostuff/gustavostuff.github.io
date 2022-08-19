@@ -1,7 +1,11 @@
+:root {
+  --highlight-color: #4287d2;
+  --bg-color: #e0f4fc;
+}
+
 body {
   padding: 2rem;
-  background-color: #e0f4fc;
-  color: #383f4a;
+  background-color: var(--bg-color);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -47,9 +51,22 @@ p {
   border: none;
 }
 
+.blue-btn {
+  background-color: var(--highlight-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-weight: bold;
+}
+
 .link {
   text-decoration: none;
-  font-weight: bolder;
-  color: #25aae1;
+  font-weight: bold;
+  color: var(--highlight-color);
   padding: 1rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
