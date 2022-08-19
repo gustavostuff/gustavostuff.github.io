@@ -43,8 +43,10 @@ p {
 }
 
 .chart-container {
-  width: 25rem;
+  width: 27rem;
   height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .cube-iframe {
