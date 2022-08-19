@@ -56,19 +56,19 @@ let interactiveChart;
       datasets: [{
         label: 'The points',
         data: Gordan.normalizePoints(pointsCopy),
-        backgroundColor: '#f40'
+        backgroundColor: '#f00'
       }, {
         label: 'Linear regression rect',
         data: rect,
-        backgroundColor: '#443'
+        backgroundColor: 'rgba(204, 0, 0, 0.5)'
       }, {
         label: 'Quadratic regression curve',
         data: curve,
-        backgroundColor: '#441'
+        backgroundColor: 'rgba(0, 126, 51, 0.5)'
       }, {
         label: 'Grade 6 regression curve',
         data: gradeSixCurve,
-        backgroundColor: '#144'
+        backgroundColor: 'rgba(0, 153, 204, 0.5)'
       }]
     },
     options: {
