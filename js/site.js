@@ -83,7 +83,7 @@ let interactiveChart;
         alert('test');
       },
       onClick: function (element) {
-        if (this.data.datasets[0].data.length >= MAX_POINTS_ALLOWED){
+        if (this.data.datasets[0].data.length >= MAX_POINTS_ALLOWED) {
           alert("OK, that's enough.");
           return;
         }
@@ -92,13 +92,13 @@ let interactiveChart;
 
         // transform/translate red points coords
         for (var scaleKey in this.scales) {
-            scaleRef = this.scales[scaleKey];
+          scaleRef = this.scales[scaleKey];
 
-            if (scaleRef.isHorizontal() && scaleKey == 'x-axis-1') {
-                valueX = scaleRef.getValueForPixel(element.offsetX);
-            } else if (scaleKey == 'y-axis-1') {
-                valueY = scaleRef.getValueForPixel(element.offsetY);
-            }
+          if (scaleRef.isHorizontal() && scaleKey == 'x-axis-1') {
+            valueX = scaleRef.getValueForPixel(element.offsetX);
+          } else if (scaleKey == 'y-axis-1') {
+            valueY = scaleRef.getValueForPixel(element.offsetY);
+          }
         }
 
         // red points
@@ -106,7 +106,7 @@ let interactiveChart;
           x: valueX,
           y: valueY
         });
-        
+
         pointsCopy = this.data.datasets[0].data;
         refreshCurves(pointsCopy, calculateGranularity());
         this.update();
@@ -122,8 +122,8 @@ let interactiveChart;
   };
 
   fetch('https://api.github.com/repos/tavuntu/gooi')
-  .then(data => {
-    console.log('data.stargazers_count:', data.json());
-  })
-  .catch(error => console.error(error));
+    .then(data => {
+      console.log('data.stargazers_count:', data.json());
+    })
+    .catch(error => console.error(error));
 })();
