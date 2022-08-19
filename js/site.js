@@ -60,15 +60,15 @@ let interactiveChart;
       }, {
         label: 'Linear regression rect',
         data: rect,
-        backgroundColor: '#fcc'
+        backgroundColor: '#443'
       }, {
         label: 'Quadratic regression curve',
         data: curve,
-        backgroundColor: '#cfc'
+        backgroundColor: '#441'
       }, {
         label: 'Grade 6 regression curve',
         data: gradeSixCurve,
-        backgroundColor: '#ccf'
+        backgroundColor: '#144'
       }]
     },
     options: {
