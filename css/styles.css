@@ -2,6 +2,7 @@
   --clear-color: #ffffff;
   --dark-color: #222222;
   --blue: #0099cc;
+  --yellow: #ffff00;
 }
 
 body {
@@ -97,6 +98,16 @@ p {
 body.dark-theme {
   background-color: var(--dark-color);
   color: var(--clear-color);
+  transition: all 0.5s;
+}
+
+body.dark-theme .star {
+  color: var(--yellow);
+  transition: all 0.5s;
+}
+
+.star {
+  color: var(--dark-color);
   transition: all 0.5s;
 }
 

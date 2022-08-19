@@ -148,8 +148,7 @@ const toggleDarkTheme = () => {
   };
 
   fetch('https://api.github.com/repos/tavuntu/gooi')
-    .then(data => {
-      console.log('data.stargazers_count:', data.json());
-    })
+    .then(res => res.json())
+    .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
 })();
