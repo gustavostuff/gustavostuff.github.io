@@ -1,6 +1,7 @@
 :root {
   --highlight-color: #ffffff;
   --bg-color: #222222;
+  --blue: #007acc;
 }
 
 body {
@@ -77,7 +78,7 @@ p {
 .link {
   text-decoration: none;
   font-weight: bold;
-  color: var(--highlight-color);
+  color: var(--blue);
   padding: 1rem;
 }
 
