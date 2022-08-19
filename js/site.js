@@ -53,10 +53,8 @@ const toggleDarkTheme = () => {
   let gradeSixCurve = Gordan.getRegressionPath(pointsCopy, 6);
   let canvas = $('#chart');
 
-  window.addEventListener('keypress', (evt) => {
-    if (evt.key && evt.key.toLocaleLowerCase() === 'd') {
-      toggleDarkTheme()
-    }
+  document.addEventListener("dblclick", function() {
+    toggleDarkTheme();
   });
 
   interactiveChart = new Chart(canvas, {
