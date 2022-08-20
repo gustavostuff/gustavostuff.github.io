@@ -1,6 +1,7 @@
 :root {
   --clear-color: #ffffff;
   --dark-color: #222222;
+  --semi-lightcolor: #555555;
   --blue: #0099cc;
   --yellow: #ffff00;
 }
@@ -19,7 +20,6 @@ body {
 p {
   padding-top: 1rem;
   margin: 0;
-  text-align: center;
   max-width: 40rem;
 }
 
@@ -30,10 +30,10 @@ p {
 }
 
 .column {
+  width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: end;
   justify-content: center;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -61,6 +61,7 @@ p {
 }
 
 .chart-container {
+  width: 20rem;
   height: 20rem;
   padding: 1rem;
   box-sizing: border-box;
@@ -108,6 +109,14 @@ p {
   margin-bottom: 1rem;
 }
 
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
 body.dark-theme {
   background-color: var(--dark-color);
   color: var(--clear-color);
@@ -117,6 +126,10 @@ body.dark-theme {
 body.dark-theme .star {
   color: var(--yellow);
   transition: all 0.5s;
+}
+
+body.dark-theme .column {
+  border-color: var(--semi-lightcolor);
 }
 
 .star {
@@ -134,5 +147,6 @@ body.dark-theme .star {
     align-items: center;
     align-self: stretch;
     padding: 1rem;
+    width: auto;
   }
 }
