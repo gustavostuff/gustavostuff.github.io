@@ -152,3 +152,4 @@ const toggleDarkTheme = () => {
     .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
 })();
+
