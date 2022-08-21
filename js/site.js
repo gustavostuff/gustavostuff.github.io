@@ -151,5 +151,11 @@ const toggleDarkTheme = () => {
     .then(res => res.json())
     .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
-})();
 
+    window.onload = () => {
+      cubeIframe = new HTMLIFrameElement();
+      cubeIframe = document.querySelector('#cube-iframe');
+      let doc = cubeIframe.contentDocument;
+      doc.body.innerHTML = '';
+    };
+})();
