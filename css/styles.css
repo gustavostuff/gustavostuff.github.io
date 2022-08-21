@@ -18,8 +18,6 @@ body {
 }
 
 p {
-  padding-top: 1rem;
-  margin: 0;
   max-width: 40rem;
 }
 
@@ -34,8 +32,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
   border: 1px solid transparent;
   border-radius: 1rem;
   margin: 0.5rem;
@@ -152,7 +150,7 @@ body.dark-theme .column {
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    padding: 2rem;
+    padding: 1rem;
     width: auto;
   }
 }
