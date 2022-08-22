@@ -18,9 +18,11 @@ body {
 }
 
 p {
-  padding-top: 1rem;
-  margin: 0;
-  max-width: 40rem;
+  margin: 1rem 0 0 0;
+}
+
+ul {
+  margin: 1rem 0 0 0;
 }
 
 .row {
@@ -30,12 +32,11 @@ p {
 }
 
 .column {
+  padding: 1rem;
   width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: end;
-  padding: 1rem;
   border: 1px solid transparent;
   border-radius: 1rem;
   margin: 0.5rem;
@@ -43,11 +44,12 @@ p {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  transition: border 0.5s;
 }
 
-.card-image {
-  margin-top: auto;
-  margin-bottom: auto;
+.card-item {
+  margin: auto;
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -78,6 +80,10 @@ p {
   box-sizing: border-box;
 }
 
+.chart-container canvas {
+  border: 1px solid var(--blue);
+}
+
 .cube-iframe {
   border: none;
   height: 19rem;
@@ -87,7 +93,6 @@ p {
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  margin: 0.5rem 0.5rem 0 0.5rem;
   font-weight: bold;
   color: var(--clear-color);
   background-color: var(--blue);
@@ -128,6 +133,10 @@ p {
   padding-right: 1rem;
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
 body.dark-theme {
   background-color: var(--dark-color);
   color: var(--clear-color);
@@ -148,16 +157,13 @@ body.dark-theme .column {
   transition: all 0.5s;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1100px) {
   .row {
     flex-direction: column;
   }
   
   .column {
     flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    padding: 1rem;
     width: auto;
   }
 }

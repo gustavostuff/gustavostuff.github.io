@@ -85,16 +85,10 @@ const toggleDarkTheme = () => {
       },
       scales: {
         xAxes: [{
-          display: true,
-          gridLines: {
-            color: 'rgba(127, 127, 127, 0.5)'
-          },
+          display: false
         }],
         yAxes: [{
-          display: true,
-          gridLines: {
-            color: 'rgba(127, 127, 127, 0.5)'
-          },
+          display: false
         }]
       },
       maintainAspectRatio: false,
@@ -151,11 +145,4 @@ const toggleDarkTheme = () => {
     .then(res => res.json())
     .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
-
-    window.onload = () => {
-      cubeIframe = new HTMLIFrameElement();
-      cubeIframe = document.querySelector('#cube-iframe');
-      let doc = cubeIframe.contentDocument;
-      doc.body.innerHTML = '';
-    };
 })();
