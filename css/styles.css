@@ -149,12 +149,41 @@ body.dark-theme .star {
 }
 
 body.dark-theme .column {
-  border-color: var(--semi-lightcolor);
+  box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.8);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.8);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.8);
 }
 
 .star {
   color: var(--dark-color);
   transition: all 0.5s;
+}
+
+body.dark-theme .column.neon-blinking {
+  animation-name: blinking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+  0% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.1);
+  }
+  80% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.8);
+  }
+  85% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0);
+  }
+  90% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.8);
+  }
+  95% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px rgba(0, 153, 204, 0.9);
+  }
 }
 
 @media (max-width: 1100px) {
