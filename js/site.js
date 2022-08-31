@@ -145,4 +145,7 @@ const toggleDarkTheme = () => {
     .then(res => res.json())
     .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
+  
+    let yoe = new Date().getFullYear() - 2014;
+    document.querySelector('#yoe').innerHTML = yoe;
 })();
