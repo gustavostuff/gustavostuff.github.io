@@ -1,4 +1,4 @@
-/* Licensed under MIT: https://github.com/tavuntu/gordan/blob/master/LICENSE.md
+/* Licensed under MIT: https://github.com/gustavostuff/gordan/blob/master/LICENSE.md
 */
 
 /**

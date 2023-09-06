@@ -141,7 +141,7 @@ const toggleDarkTheme = () => {
     interactiveChart.update();
   };
 
-  fetch('https://api.github.com/repos/tavuntu/gooi')
+  fetch('https://api.github.com/repos/gustavostuff/gooi')
     .then(res => res.json())
     .then(data => document.querySelector('#stars').innerHTML = data.stargazers_count)
     .catch(error => console.error(error));
