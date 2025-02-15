@@ -36,7 +36,6 @@ ul {
   width: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
   border: 1px solid transparent;
   border-radius: 1rem;
   margin: 0.5rem;
